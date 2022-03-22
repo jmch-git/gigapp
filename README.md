@@ -3,11 +3,14 @@
 ## Introduction
 Bands and band managers need a way to organize their gig schedules and keep track of venue contact information.  Gig App allows users to create bands, venues and gigs.  The band detail view shows gigs with their venue and dates sorted in date order. 
 
-## Screenshots<img width="1796" alt="Screen Shot 2022-02-23 at 9 24 21 PM" src="https://user-images.githubusercontent.com/94821167/155463821-677fd5ef-5682-4388-b98b-982e1d7e1f6d.png">
-<img width="2005" alt="Screen Shot 2022-02-23 at 9 25 45 PM" src="https://user-images.githubusercontent.com/94821167/155463875-059316c4-75c7-4edf-aaf8-a45981d4f8cb.png">
-<img width="2009" alt="Screen Shot 2022-02-23 at 9 26 32 PM" src="https://user-images.githubusercontent.com/94821167/155463903-8e72ec23-61ef-4bc5-9678-6aa96bc1aade.png">
-<img width="2006" alt="Screen Shot 2022-02-23 at 9 27 47 PM" src="https://user-images.githubusercontent.com/94821167/155463923-0e28bfbe-80c1-4961-af29-784403289aea.png">
-<img width="2374" alt="Screen Shot 2022-02-23 at 9 28 33 PM" src="https://user-images.githubusercontent.com/94821167/155463942-a6602dec-8ef8-4985-97d5-13d4c162871c.png">
+## Screenshots
+<img width="2257" alt="Screen Shot 2022-03-22 at 3 57 59 PM" src="https://user-images.githubusercontent.com/94821167/159589973-5807052e-b5cf-48c3-b21a-624b87db2439.png">
+
+<img width="2253" alt="Screen Shot 2022-03-22 at 3 58 14 PM" src="https://user-images.githubusercontent.com/94821167/159590005-cdbf85bc-6ff3-4d91-9258-ce8a13cffcbb.png">
+
+<img width="2550" alt="Screen Shot 2022-03-22 at 3 45 24 PM" src="https://user-images.githubusercontent.com/94821167/159589806-9feebf01-edf5-40aa-9097-aaae230a2ab0.png">
+
+<img width="2553" alt="Screen Shot 2022-03-22 at 3 54 00 PM" src="https://user-images.githubusercontent.com/94821167/159589773-a254f3ff-1a79-458e-b8cd-542750af2252.png">
 
 ## Technologies Used
 Python\
