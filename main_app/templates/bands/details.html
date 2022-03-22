@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <span class="white-text" >
+    <h1>{{ band.band_name}}'s Details</h1>
+  </span>  
+
+    <div class="row">
+        <div class="col s6">
+            <div class="card">
+                    <div class="card-content">
+                        <span class='card-title'>{{ band.band_name }}</span>
+                        <p>Manager Name: {{ band.mgr_name }}</p>
+                        <p>Manager Email: {{ band.mgr_email }}</p>
+                        <p>Manager Phone: {{ band.mgr_phone }}</p>
+                    </div>   
+                    <div class="card-action">
+                        <a href="{% url 'bands_update' band.id %}">EDIT</a>
+                        <a href="{% url 'bands_delete' band.id %}">DELETE</a>
+                    </div> 
+            </div>    
+        </div>
+        <div class="col s6">
+            <form action="{% url 'add_gig' band.id %}" method="POST">
+                {% csrf_token %} {{ gig_form.as_p }}
+                <input type="submit" class="waves-effect waves-light btn #ffea00 yellow accent-3 black-text" value="Add Gig" />
+            </form>   
+            
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th>Gig Date</th>
+                  <th>Venue Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for gig in band.gig_set.all %}
+                <tr>
+                  <td>{{gig.date}}</td>
+                  <td>{{gig.venue}}</td>
+                  <td><span><a href="{% url 'delete_gig' band.id gig.id %}" class="pink-text">DELETE GIG</a></span></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+    </div>        
+    <script>
+        var dateEl = document.getElementById('id_date');
+        {% comment %} M. is referencing materialize {% endcomment %}
+        M.Datepicker.init(dateEl, {
+          format: 'yyyy-mm-dd',
+          defaultDate: new Date(),
+          setDefaultDate: true,
+          autoClose: true
+        });
+
+        var selectEl = document.getElementById('id_venue');
+        M.FormSelect.init(selectEl);
+    </script>   
+{% endblock %}

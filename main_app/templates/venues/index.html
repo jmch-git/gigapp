@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<!-- For Loop through the venue list -->
+    {% for venue in venues %}
+        <div class="card">
+            <a href="{% url 'venues_detail' venue.id %}">
+                <div class="card-content">
+                    <span class="card-title">{{ venue.venue_name }}</span>
+                    <p>Contact Name: {{ venue.contact_name }}</p>
+                    <p>Address: {{ venue.address }}, {{ venue.city }}, {{ venue.state }}  {{ venue.zip }}</p>
+                    <p>phone: {{ venue.phone }}</p>
+                    <p>website: {{ venue.website }}</p>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+    
+{% endblock %}

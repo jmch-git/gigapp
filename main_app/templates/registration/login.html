@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Log In</h1>
+
+<form method="POST" action='{% url 'login' %}'>
+    {% csrf_token %} {{ form.as_p }}
+    <input type="submit" class="btn #ffea00 yellow accent-3 black-text" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+
+{% endblock %}
+
+
+<!-- 
+<input type='hidden' name='next' value='{{ next }}' /> 
+This is a Django authentication feature that automatically redirects
+a user that tries to access a protected route, 
+back to that route after they log in
+-->

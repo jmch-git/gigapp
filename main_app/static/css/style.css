@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "RocknRoll One", sans-serif;
+
+}
+
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1 0 auto;
+}
+
+.nav-bar {
+    color: black;
+  }
+  
+.my-container{
+    width:100%;
+}  
+
+#left_logo {
+  margin-left: 50px;
+}
+
+.body-image {
+  text-align: center;
+  background-image: url("../css/Bottom_of_the_Hill.jpg");
+}
+
+.foot {
+  margin-top: 20px;
+  color: black;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer {
+  padding-top: 0;
+  text-align: right;
+  /* height: 200px; */
+}
+

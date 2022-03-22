@@ -1,0 +1,19 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+    <h1>{{ venue.venue_name }} Details</h1>
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">{{ venue.venue_name }}</span>
+                <p>Contact Name: {{ venue.contact_name }}</p>
+                <p>Address: {{ venue.address }}, {{ venue.city }}, {{ venue.state }}  {{ venue.zip }}</p>
+                <p>phone: {{ venue.phone }}</p>
+                <p>website: {{ venue.website }}</p>
+            </div>
+            <div class="card-action">
+                <a href="{% url 'venues_update' venue.id %}">EDIT</a>
+                <a href="{% url 'venues_delete' venue.id %}">DELETE</a>
+            </div>            
+        </div>
+
+{% endblock %}
