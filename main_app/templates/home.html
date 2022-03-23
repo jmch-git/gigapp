@@ -1,79 +1,8 @@
-{% load static %}
+{% extends 'base.html' %} {% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gig App</title>
-    <!-- link to materialize css -->
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-      />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- link to additional css -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=RocknRoll+One&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0defcb7b67.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> 
-</head>
-
-<body class="body-image">
-    <header class="navbar-fixed">
-        <nav class="nav-bar">
-          <div class="nav-wrapper #d81b60 pink darken-1">
-            <ul>
-              <li>
-                <a href="/" class="left brand-logo" id="left_logo" style="color:black">Gig App</a>
-              </li>
-            </ul> 
-            <ul class="right"  style="color:black">
-                <li><a href="{% url 'about' %}" class="black-text">About</a></li>
-                {% if user.is_authenticated %}
-                  <li><a href="{% url 'index' %}" class="black-text">View All My Bands</a></li> 
-                  <li><a href="{% url 'bands_create' %}" class="black-text">Add a New Band</a></li>
-                  <li><a href="{% url 'venues_index' %}" class="black-text">View All Venues</a></li>
-                  <li><a href="{% url 'venues_create' %}" class="black-text">Add A Venue</a></li>
-                  <li><a href="{% url 'logout' %}" class="black-text">Log Out</a></li>
-                {% else %}
-                  <li><a href="{% url 'signup' %}" class="black-text">Sign Up</a></li>  
-                  <li><a href="{% url 'login' %}" class="black-text">Log In</a></li>
-                {% endif %}  
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <main class="container">
-            <span class="purple-text text-lighten-5">
-              <br />
-              <h1>Welcome to Gig App</h1>
-                <br>
-              {% comment %} <h3>Take a TOUR of the site HERE</h3> {% endcomment %}
-            </span>
-      </main>
-      <footer class="page-footer #d81b60 pink darken-1">
-        <div class="foot">
-        <ul>
-          <i class="fa-solid fa-drum fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-guitar fa-7x">&nbsp; &nbsp; </i>
-          <i class="fa-solid fa-drum fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-guitar fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-drum fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-guitar fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-drum fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-guitar fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-drum fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-guitar fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-drum fa-7x">&nbsp; &nbsp;</i>
-          <i class="fa-solid fa-guitar fa-7x">&nbsp; &nbsp;</i>
-        </ul>
-        </div>
-      </footer>
-    </body>
-</html>
-
-
-
+<div class="body-image">
+  <br />
+  <h1 class="purple-text text-lighten-5">Welcome to Gig App</h1>
+  <br />
+</div>
+{% endblock %}

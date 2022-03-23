@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+<div class="container">
 <h1>Delete Band</h1>
 
 <h4>
@@ -14,5 +14,5 @@
     <input type='submit' value='YES - DELETE' class='btn red'/>
     <a href="{% url 'detail' band.id %}">CANCEL</a>
 </form>
-
+</div>
 {% endblock %}

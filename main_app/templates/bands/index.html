@@ -1,20 +1,19 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% block content %}
 
-{% block content %}
+<div class="container">
+  <h1>BANDS</h1>
 
-        <h1>BANDS</h1>  
-
-{% for band in bands %}
-    <div class="card">
-        <a href="{% url 'detail' band.id %}">
-            <div class="card-content">
-                <span class="card-title">{{ band.band_name }}</span>
-                <p>Manager Name: {{ band.mgr_name }}</p>
-                <p>Manager Email: {{ band.mgr_email }}</p>
-                <p>Manager Phone: {{ band.mgr_phone }}</p>
-            </div>    
-        </a>    
-    </div>
-{% endfor %}        
-
+  {% for band in bands %}
+  <div class="card">
+    <a href="{% url 'detail' band.id %}">
+      <div class="card-content">
+        <span class="card-title">{{ band.band_name }}</span>
+        <p>Manager Name: {{ band.mgr_name }}</p>
+        <p>Manager Email: {{ band.mgr_email }}</p>
+        <p>Manager Phone: {{ band.mgr_phone }}</p>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
 {% endblock %}

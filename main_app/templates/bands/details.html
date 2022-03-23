@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container">
     <h1>{{ band.band_name}}'s Details</h1>
     <div class="row">
         <div class="col s6">
@@ -55,4 +56,5 @@
         var selectEl = document.getElementById('id_venue');
         M.FormSelect.init(selectEl);
     </script>   
+  </div>    
 {% endblock %}

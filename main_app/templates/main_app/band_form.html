@@ -1,4 +1,6 @@
-{% extends 'base.html' %} {% block content %} {% if object %}
+{% extends 'base.html' %} {% block content %} 
+<div class="container">
+{% if object %}
 
 <h1>Edit <span class="pink-text"> {{ object.band_name }}'s</span> Details</h1>
 
@@ -19,5 +21,5 @@
     value="{% if object %} EDIT {% else %} ADD {% endif %}"
   />
 </form>
-
+</div>
 {% endblock %}
