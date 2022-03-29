@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
 
 <div class="container">
   <h1>VENUES</h1>
@@ -11,8 +12,7 @@
         <span class="card-title">{{ venue.venue_name }}</span>
         <p>Contact Name: {{ venue.contact_name }}</p>
         <p>
-          Address: {{ venue.address }}, {{ venue.city }}, {{ venue.state }} {{
-          venue.zip }}
+          Address: {{ venue.address }}, {{ venue.city }}, {{ venue.state }} {{venue.zip }}
         </p>
         <p>phone: {{ venue.phone }}</p>
         <p>website: {{ venue.website }}</p>
