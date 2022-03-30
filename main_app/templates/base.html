@@ -7,11 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gig App</title>
+    <!--link to jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- link to materialize css -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- link to additional css -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +28,9 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      $(".button-collapse").sideNav();
+      $(document).ready(function(){
+        $(".sidenav").sidenav();
+      });
     </script>
     <link
       rel="stylesheet"
@@ -36,48 +41,38 @@
   <body>
     <header>
       <div class="my-container">
-        <nav>
-          <div class="nav-wrapper #d81b60 pink darken-1">
-            <ul>
-              <li>
-                <a href="/" class="brand-logo" style="color: black">Gig App</a>
-              </li>
-            </ul>
-            <ul class="right" style="color: black">
+        <nav class="#d81b60 pink darken-1">
+          <div class="nav-wrapper">
+              <a href="/" class="brand-logo" style="color: black">Gig App</a>
+              <a href="#" class="sidenav-trigger" data-target="mobile-nav" style="color: black"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down" style="color: black">
               <li><a href="{% url 'about' %}" class="black-text">About</a></li>
               {% if user.is_authenticated %}
-              <li>
-                <a href="{% url 'index' %}" class="black-text"
-                  >View All My Bands</a
-                >
-              </li>
-              <li>
-                <a href="{% url 'bands_create' %}" class="black-text"
-                  >Add a New Band</a
-                >
-              </li>
-              <li>
-                <a href="{% url 'venues_index' %}" class="black-text"
-                  >View All Venues</a
-                >
-              </li>
-              <li>
-                <a href="{% url 'venues_create' %}" class="black-text"
-                  >Add A Venue</a
-                >
-              </li>
-              <li>
-                <a href="{% url 'logout' %}" class="black-text">Log Out</a>
-              </li>
+                <li><a href="{% url 'index' %}" class="black-text">View All My Bands</a></li>
+                <li><a href="{% url 'bands_create' %}" class="black-text">Add a New Band</a></li>
+                <li><a href="{% url 'venues_index' %}" class="black-text">View All Venues</a></li>
+                <li><a href="{% url 'venues_create' %}" class="black-text">Add A Venue</a></li>
+                <li><a href="{% url 'logout' %}" class="black-text">Log Out</a></li>
               {% else %}
-              <li>
-                <a href="{% url 'signup' %}" class="black-text">Sign Up</a>
-              </li>
-              <li><a href="{% url 'login' %}" class="black-text">Log In</a></li>
+                <li><a href="{% url 'signup' %}" class="black-text">Sign Up</a></li>
+                <li><a href="{% url 'login' %}" class="black-text">Log In</a></li>
               {% endif %}
             </ul>
           </div>
         </nav>
+        <ul class="sidenav" id="mobile-nav">
+          <li><a href="{% url 'about' %}" class="black-text">About</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'index' %}" class="black-text">View All My Bands</a></li>
+            <li><a href="{% url 'bands_create' %}" class="black-text">Add a New Band</a></li>
+            <li><a href="{% url 'venues_index' %}" class="black-text">View All Venues</a></li>
+            <li><a href="{% url 'venues_create' %}" class="black-text">Add A Venue</a></li>
+            <li><a href="{% url 'logout' %}" class="black-text">Log Out</a></li>
+          {% else %}
+            <li><a href="{% url 'signup' %}" class="black-text">Sign Up</a></li>
+            <li><a href="{% url 'login' %}" class="black-text">Log In</a></li>
+          {% endif %}              
+        </ul>  
       </div>
     </header>
     <main>{% block content %} {% endblock %}</main>
