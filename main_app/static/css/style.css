@@ -44,6 +44,10 @@ main {
   background-image: url("../css/Bottom_of_the_Hill.jpg");
 }
 
+.home-block {
+  display: block;
+}
+
 .foot {
   margin-top: 20px;
   color: black;
