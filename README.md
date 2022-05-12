@@ -23,7 +23,7 @@ CSS\
 HTML 5
 
 ## Getting Started
-Deployed App link (Heroku) - https://gig-app-jmch.herokuapp.com/
+Deployed App link (Heroku) - https://gigapp-jmch.herokuapp.com/
 
 ## Wireframes
 ![Screen Shot 2022-02-24 at 5 27 43 AM](https://user-images.githubusercontent.com/94821167/155533490-04f785f8-2f51-4df5-87df-64b8ee0eca3b.png)
